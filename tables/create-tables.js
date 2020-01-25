@@ -1,6 +1,8 @@
-var AWS = require('aws-sdk');
-var dynamodb = new AWS.DynamoDB();
-var tablePrefix = "Examples.";
+const AWS = require('aws-sdk');
+AWS.config.region = 'us-east-1';
+const dynamodb = new AWS.DynamoDB();
+const tablePrefix = "Examples.";
+
 // set AWS_REGION=us-east-1
 // https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Expressions.Attributes.html
 // https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/AppendixSampleTables.html
