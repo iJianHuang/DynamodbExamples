@@ -1,0 +1,12 @@
+{
+    "name": "dynamodb-examples",
+    "repository": "",
+    "version": "1.0.0",
+    "description": "DynamoDB examples and exercises",
+    "author": "Jian Huang",
+    "license": "ISC",
+    "dependencies": {
+        "aws-sdk": "^2.608.0",
+        "utf8-length": "0.0.1"
+    }
+}
