@@ -524,7 +524,7 @@ const putReqsReply = [{
 let req = {
     RequestItems: {
         'Examples.ProductCategory': putReqsProductCategory,
-        //"Examples.Forum": putReqsForum,
+        "Examples.Forum": putReqsForum,
         "Examples.Thread": putReqsThread,
         "Examples.Reply": putReqsReply
     },

@@ -6,6 +6,7 @@ const tablePrefix = "Examples.";
 // set AWS_REGION=us-east-1
 // https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Expressions.Attributes.html
 // https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/AppendixSampleTables.html
+// https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Expressions.UpdateExpressions.html
 
 function createProductCategoryTable() {
     var params = {
