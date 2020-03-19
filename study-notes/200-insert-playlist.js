@@ -6,36 +6,38 @@ AWS.config.region = 'us-east-1';
 var print = require('../lib/helpers').printPretty;
 var dynamodb = new AWS.DynamoDB();
 const tablePrefix = "Examples.";
-const createdDateTime = new Date().toISOString();
-const playListName = "Play List 2";
+// const createdDateTime = new Date().toISOString();
+// const playListName = "Play List 2";
 
-var params = {
-    "TableName": tablePrefix + "PlayList",
-    "Item": {
-        "UserId": {
-            "S": "jhuang@example.com"
+function insertPlayList(userId, playListName, createdDateTime) {
+    var params = {
+        "TableName": tablePrefix + "PlayList",
+        "Item": {
+            "UserId": {
+                "S": userId
+            },
+            "PlayListId": {
+                "S": userId + "/" + createdDateTime
+            },
+            "PlayListName": {
+                "S": playListName
+            },
+            "Views": {
+                "N": "0"
+            },
+            "CreatedDateTime": {
+                "S": createdDateTime
+            },
+            "UpdatedDateTime": {
+                "S": createdDateTime
+            }
         },
-        "PlayListId": {
-            "S": "jhuang@example.com/" + createdDateTime
-        },
-        "PlayListName": {
-            "S": playListName
-        },
-        "Views": {
-            "N": "0"
-        },
-        "CreatedDateTime": {
-            "S": createdDateTime
-        },
-        "UpdatedDateTime": {
-            "S": createdDateTime
-        }
-    },
-    "ReturnConsumedCapacity": "TOTAL"
+        "ReturnConsumedCapacity": "TOTAL"
+    };
+
+    return dynamodb.putItem(params).promise();
+}
+
+module.exports = {
+    insertPlayList: insertPlayList
 };
-
-var promise = dynamodb.putItem(params).promise();
-
-promise
-    .then(print)
-    .catch(print);

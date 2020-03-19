@@ -28,6 +28,9 @@ function createPlayListTable() {
         }, {
             AttributeName: "Views",
             AttributeType: "N"
+        }, {
+            AttributeName: "DisplayOrders",
+            AttributeType: "L"
         }],
         ProvisionedThroughput: {
             ReadCapacityUnits: 1,

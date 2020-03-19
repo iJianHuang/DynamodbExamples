@@ -22,9 +22,6 @@ function queryPlayListByUserId(userId) {
     return dynamodb.query(params).promise();
 }
 
-queryPlayListByUserId(userId)
-    .then(print)
-    .catch(print);
 
 module.exports = {
     queryPlayListByUserId: queryPlayListByUserId

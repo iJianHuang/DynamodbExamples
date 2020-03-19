@@ -5,9 +5,17 @@
     "description": "DynamoDB examples and exercises",
     "author": "Jian Huang",
     "license": "ISC",
+    "scripts": {
+        "study-notes-tests": "./node_modules/.bin/mocha tests/study-notes-tests --reporter spec --retries 0 --timeout 10000"
+    },
     "dependencies": {
         "aws-sdk": "^2.608.0",
         "lodash": "^4.17.15",
         "utf8-length": "0.0.1"
+    },
+    "devDependencies": {
+        "chai": "^4.2.0",
+        "co": "^4.6.0",
+        "mocha": "^7.0.1"
     }
 }
