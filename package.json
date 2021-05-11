@@ -10,7 +10,7 @@
     },
     "dependencies": {
         "aws-sdk": "^2.608.0",
-        "lodash": "^4.17.19",
+        "lodash": "^4.17.21",
         "utf8-length": "0.0.1"
     },
     "devDependencies": {
