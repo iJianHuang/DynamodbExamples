@@ -9,7 +9,7 @@
         "study-notes-tests": "./node_modules/.bin/mocha tests/study-notes-tests --reporter spec --retries 0 --timeout 10000"
     },
     "dependencies": {
-        "aws-sdk": "^2.814.0",
+        "aws-sdk": "^2.1354.0",
         "lodash": "^4.17.21",
         "utf8-length": "0.0.1"
     },
